@@ -1,14 +1,28 @@
-import React from 'react';
-import { View, StyleSheet, Text, TextInput, Button } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, TextInput, Button, Alert } from 'react-native';
 
 const AddTodo = ({ onSubmit }) => {
+  const [value, setValue] = useState('');
+
   const pressHandler = () => {
-    onSubmit('test todo');
+    if (value.trim()) {
+      onSubmit(value);
+      setValue('');
+    } else {
+      Alert.alert(`Todo is empty!
+Please write down the to-do list!`);
+    }
   };
 
   return (
     <View style={styles.block}>
-      <TextInput style={styles.input} placeholder="todo" />
+      <TextInput
+        style={styles.input}
+        onChangeText={setValue}
+        value={value}
+        placeholder="Todo..."
+        autoCorrect
+      />
       <Button onPress={pressHandler} title="add" />
     </View>
   );
@@ -19,6 +33,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingTop: 20,
+    marginBottom: 15,
   },
   input: {
     borderRadius: 5,

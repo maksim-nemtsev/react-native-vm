@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const Navbar = ({ tittle }) => {
+const Navbar = ({ title }) => {
   return (
     <View style={styles.navbar}>
-      <Text style={styles.text}>{tittle}</Text>
+      <Text style={styles.text}>{title}</Text>
     </View>
   );
 };
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'mediumpurple',
   },
   text: {
-    color: 'white',
+    color: 'gold',
     fontWeight: 'bold',
     fontSize: 24,
     textTransform: 'uppercase',
