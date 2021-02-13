@@ -19,9 +19,6 @@ const MainScreen = ({ addTodo, todos, removeTodo, openTodo }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#b0c6eb',
-  },
 });
 
 export default MainScreen;
