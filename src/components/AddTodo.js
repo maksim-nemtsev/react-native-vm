@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, Button, Alert } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import AppTextBold from './ui/AppTextBold';
 
 const AddTodo = ({ onSubmit }) => {
   const [value, setValue] = useState('');
@@ -23,7 +25,9 @@ Please write down the to-do list!`);
         placeholder="Todo..."
         autoCorrect
       />
-      <Button onPress={pressHandler} title="add" />
+      <AntDesign.Button name="plussquare" onPress={pressHandler} size={24} color="white">
+        <AppTextBold style={{ color: 'white' }}>Add</AppTextBold>
+      </AntDesign.Button>
     </View>
   );
 };
@@ -37,7 +41,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderRadius: 5,
-    width: '40%',
+    width: '70%',
     paddingLeft: 5,
     paddingRight: 5,
     borderStyle: 'solid',

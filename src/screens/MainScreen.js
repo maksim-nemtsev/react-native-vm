@@ -1,12 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import AddTodo from '../components/AddTodo';
 import Todo from '../components/Todo';
 
 const MainScreen = ({ addTodo, todos, removeTodo, openTodo }) => {
   return (
     <View>
-      <Text>Main Screen</Text>
       <AddTodo onSubmit={addTodo} />
 
       <FlatList
@@ -18,7 +17,6 @@ const MainScreen = ({ addTodo, todos, removeTodo, openTodo }) => {
   );
 };
 
-const styles = StyleSheet.create({
-});
+const styles = StyleSheet.create({});
 
 export default MainScreen;

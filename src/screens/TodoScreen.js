@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import EditModal from '../components/EditModal';
+import AppButton from '../components/ui/AppButton';
 import AppCard from '../components/ui/AppCard';
+import AppTextBold from '../components/ui/AppTextBold';
 
 import { THEME } from '../theme';
 
@@ -25,15 +30,22 @@ const TodoScreen = ({ goBack, todo, onRemove, onSave }) => {
         onSave={savaHandler}
       />
       <AppCard style={styles.card}>
-        <Text style={styles.title}>{todo.title}</Text>
-        <Button title="Edit" onPress={() => setModal()} />
+        <AppTextBold style={styles.title}>{todo.title}</AppTextBold>
+
+        <AppButton title="Edit" onPress={() => setModal()}>
+          <AntDesign name="edit" size={24} color="white" />
+        </AppButton>
       </AppCard>
       <View style={styles.buttons}>
         <View style={styles.button}>
-          <Button title="Delete" color={THEME.DELETE_COLOR} onPress={() => onRemove(todo.id)} />
+          <AppButton color={THEME.DELETE_COLOR} onPress={() => onRemove(todo.id)}>
+            <MaterialIcons name="delete-outline" size={24} color="white" />
+          </AppButton>
         </View>
         <View style={styles.button}>
-          <Button title="Back" onPress={goBack} color={THEME.GREY_COLOR} />
+          <AppButton onPress={goBack} color={THEME.GREY_COLOR}>
+            <Ionicons name="ios-arrow-back" size={24} color="white" />
+          </AppButton>
         </View>
       </View>
     </View>
@@ -50,7 +62,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   button: {
-    width: '45%',
+    width: '20%',
   },
   title: {
     fontSize: 18,
