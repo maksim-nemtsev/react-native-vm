@@ -4,4 +4,5 @@ export const THEME = {
   MAIN_COLOR: '#3949ac',
   TITLE_COLOR: 'gold',
   LIGHT_BLUE_COLOR: '#dee1ff',
+  PADDING_HORIZONTAL: 30,
 };

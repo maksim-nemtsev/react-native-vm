@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Dimensions } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   button: {
-    width: '20%',
+    // width: Dimensions.get('window').width / 2.5,
+    width: Dimensions.get('window').width > 300 ? 130 : 100,
   },
   title: {
     fontSize: 18,
