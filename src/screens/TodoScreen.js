@@ -3,14 +3,14 @@ import { StyleSheet, View, Dimensions } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
-import EditModal from '../components/EditModal';
-import AppButton from '../components/ui/AppButton';
-import AppCard from '../components/ui/AppCard';
-import AppTextBold from '../components/ui/AppTextBold';
+import { EditModal } from '../components/EditModal';
+import { AppButton } from '../components/ui/AppButton';
+import { AppCard } from '../components/ui/AppCard';
+import { AppTextBold } from '../components/ui/AppTextBold';
 
 import { THEME } from '../theme';
 
-const TodoScreen = ({ goBack, todo, onRemove, onSave }) => {
+export const TodoScreen = ({ goBack, todo, onRemove, onSave }) => {
   const [modal, setModal] = useState(false);
 
   const savaHandler = (title) => {
@@ -69,5 +69,3 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
 });
-
-export default TodoScreen;

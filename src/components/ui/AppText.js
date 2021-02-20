@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-const AppText = (props) => (
+export const AppText = (props) => (
   <Text style={{ ...styles.default, ...props.style }}>{props.children}</Text>
 );
 
@@ -10,5 +10,3 @@ const styles = StyleSheet.create({
     fontFamily: 'roboto-regular',
   },
 });
-
-export default AppText;

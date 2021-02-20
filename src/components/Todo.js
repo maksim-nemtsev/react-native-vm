@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import AppText from './ui/AppText';
+import { AppText } from './ui/AppText';
 
-const Todo = ({ todo, onRemove, onOpen }) => {
+export const Todo = ({ todo, onRemove, onOpen }) => {
   // use arrow function for onLongPress
   // const longPressHandler = () => {
   //   onRemove(todo.id);
@@ -31,5 +31,3 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
 });
-
-export default Todo;

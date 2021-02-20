@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList, Dimensions } from 'react-native';
-import AddTodo from '../components/AddTodo';
-import Todo from '../components/Todo';
+import { View, FlatList, Dimensions } from 'react-native';
+import { AddTodo } from '../components/AddTodo';
+import { Todo } from '../components/Todo';
 import { THEME } from '../theme';
 
-const MainScreen = ({ addTodo, todos, removeTodo, openTodo }) => {
-
+export const MainScreen = ({ addTodo, todos, removeTodo, openTodo }) => {
   //dynamic state for adaptive width
   const [deviceWidth, setDeviceWidth] = useState(
     Dimensions.get('window').width - THEME.PADDING_HORIZONTAL * 2,
@@ -36,7 +35,3 @@ const MainScreen = ({ addTodo, todos, removeTodo, openTodo }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
-
-export default MainScreen;

@@ -7,9 +7,9 @@ import {
   Platform,
 } from 'react-native';
 import { THEME } from '../../theme';
-import AppTextBold from './AppTextBold';
+import { AppTextBold } from './AppTextBold';
 
-const AppButton = ({ children, onPress, color = THEME.MAIN_COLOR }) => {
+export const AppButton = ({ children, onPress, color = THEME.MAIN_COLOR }) => {
   const Wrapper = Platform.OS === 'android' ? TouchableNativeFeedback : TouchableOpacity;
 
   return (
@@ -34,5 +34,3 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
 });
-
-export default AppButton;

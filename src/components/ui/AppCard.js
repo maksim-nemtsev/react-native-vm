@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-const AppCard = (props) => {
+export const AppCard = (props) => {
   return <View style={{ ...styles.default, ...props.style }}>{props.children}</View>;
 };
 
@@ -20,5 +20,3 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
 });
-
-export default AppCard;

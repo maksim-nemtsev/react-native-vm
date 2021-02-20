@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, Alert, Keyboard } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
-const AddTodo = ({ onSubmit }) => {
+
+export const AddTodo = ({ onSubmit }) => {
   const [value, setValue] = useState('');
 
   const pressHandler = () => {
@@ -50,5 +51,3 @@ const styles = StyleSheet.create({
     borderColor: 'mediumpurple',
   },
 });
-
-export default AddTodo;

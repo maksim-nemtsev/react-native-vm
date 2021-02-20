@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, Button, Modal, Alert } from 'react-native';
 import { THEME } from '../theme';
 
-const EditModal = ({ visible, onCancel, value, onSave }) => {
+export const EditModal = ({ visible, onCancel, value, onSave }) => {
   const [title, setTitle] = useState(value);
 
   const saveHandler = () => {
@@ -66,5 +66,3 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
 });
-
-export default EditModal;

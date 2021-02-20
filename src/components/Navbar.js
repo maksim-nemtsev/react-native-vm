@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
 import { THEME } from '../theme';
-import AppTextBold from './ui/AppTextBold';
+import {AppTextBold} from './ui/AppTextBold';
 
-const Navbar = ({ title }) => {
+export const Navbar = ({ title }) => {
   return (
     <View
       style={{
@@ -39,5 +39,3 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
 });
-
-export default Navbar;
